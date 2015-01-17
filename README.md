@@ -1,14 +1,23 @@
 Gummi LaTex Editor
 ==================
-The Gummi LaTex Editor ported to GTK3 with a lot of bug fixed.
+The is a fork of Gummi LaTex Editor, ported to GTK3 with a lot of bugs fixed.
 
-Latest news, releases and bug reports can be found on:
-
-    http://gummi.midnightcoding.org
-
-Screenshot
-----------
 ![screenshot](https://raw.github.com/aitjcize/Gummi/master/wiki/gtk3-screenshot.png)
+
+Installation
+------------
+1. Ubuntu PPA: includes two package `gummi-gtk3` and `gummi-gtk3-notex` (without texlive
+  dependency):  
+```shell
+$ sudo add-apt-repository ppa:gummi/gummi 
+$ sudo apt-get update 
+$ sudo apt-get install gummi-gtk3 # or gummi-gtk3-notex
+```
+
+2. Arch Linux users can find it on AUR or using [Yaourt](https://wiki.archlinux.org/index.php/Yaourt):  
+```shell
+$ yaourt -S gummi-gtk3-git
+```
 
 Contributing
 ------------
