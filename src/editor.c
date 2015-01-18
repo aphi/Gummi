@@ -133,6 +133,11 @@ void editor_destroy(GuEditor* ec)
   }
 
   editor_fileinfo_cleanup(ec);
+  g_object_unref(ec->view);
+  g_object_unref(ec->buffer);
+  g_object_unref(ec->stylemanager);
+  g_object_unref(ec->errortag);
+  g_object_unref(ec->searchtag);
   g_free(ec);
 }
 

@@ -65,6 +65,7 @@ int tabmanagergui_create_page(GuTabContext* tc, GuEditor* editor)
                    G_CALLBACK(on_menu_close_activate), tc);
   tabmanagergui_create_infobar(tp);
 
+  g_object_ref(editor->view);
   gtk_container_add(GTK_CONTAINER(tp->scrollw),
                     GTK_WIDGET(editor->view));
 
@@ -165,18 +166,19 @@ gchar* tabmanagergui_get_labeltext(GuTabPage* tp)
 
 gint tabmanagergui_replace_page(GuTabContext* tc, GuEditor* newec)
 {
-
   gummi->tabmanager->active_tab->editor = newec;
 
   gtk_container_remove(GTK_CONTAINER(tc->page->scrollw),
                        GTK_WIDGET(g_active_editor->view));
   editor_destroy(g_active_editor);
+
+  g_object_ref(newec->view);
   gtk_container_add(GTK_CONTAINER(tc->page->scrollw),
                     GTK_WIDGET(newec->view));
   gtk_widget_show(GTK_WIDGET(newec->view));
 
   int pos = gtk_notebook_page_num(g_tabnotebook,
-                                  gummi->tabmanager->active_tab->page->editorbox);
+                               gummi->tabmanager->active_tab->page->editorbox);
   return pos;
 }
 
