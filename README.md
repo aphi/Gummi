@@ -1,6 +1,6 @@
 Gummi LaTex Editor
 ==================
-The is a fork of Gummi LaTex Editor, ported to GTK3 with a lot of bugs fixed.
+This is a fork of the Gummi LaTex Editor, ported to GTK3 with a lot of bugs fixed.
 
 ![screenshot](https://raw.github.com/aitjcize/Gummi/master/wiki/gtk3-screenshot.png)
 
