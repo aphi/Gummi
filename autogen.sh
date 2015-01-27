@@ -1,5 +1,5 @@
 #! /bin/sh
-AM_VERSION=-1.14
+AM_VERSION=-`automake --version | head -n 1 | awk '{ print $NF }'`
 AC_VERSION=
 
 set -x
